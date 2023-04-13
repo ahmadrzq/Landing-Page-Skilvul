@@ -1,0 +1,146 @@
+/* *CSS Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* *Header */
+header {
+  display: flex;
+  justify-content: center;
+}
+.header-wrapper {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  /* margin: 0 auto; */
+  position: fixed;
+}
+
+.logo > h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffe5ca;
+}
+
+.navbar > ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar > ul > li {
+  margin: 0 1em;
+}
+
+.navbar > ul > li > a {
+  font-family: "DynaPuff", cursive;
+  color: #454545;
+  font-weight: 700;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+.search > input {
+  padding: 1em;
+  border: 2px solid #454545;
+  border-radius: 30px;
+  font-family: "DynaPuff", cursive;
+  background: transparent;
+}
+.search > input:focus {
+  outline: none;
+}
+.search > i {
+  position: absolute;
+  right: 10px;
+  margin-left: 0.2em;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #454545;
+}
+
+/* *Main */
+main {
+  width: 100%;
+}
+
+#hero {
+  background: url(assets/images/blob-scene-haikei.svg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10em;
+  font-family: "DynaPuff", cursive;
+}
+.left > img {
+  width: 100%;
+  object-fit: cover;
+}
+.left > h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #454545;
+}
+.left span {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  color: #ffe5ca;
+}
+.left > button {
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  background: #454545;
+  color: #fff3e2;
+  cursor: pointer;
+  font-family: "DynaPuff", cursive;
+}
+.right {
+  width: 100%;
+}
+.right > img {
+  width: 100%;
+  object-fit: cover;
+}
+/* *About */
+
+/* *Form */
+/* *Footer */
+/* ! Custom */
+.w-max {
+  max-width: 1200px !important;
+}
+.mb-1 {
+  margin-bottom: 1em !important;
+}
+
+/* *Fonts */
+.font {
+  font-family: "DynaPuff", cursive;
+  font-family: "Lato", sans-serif;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Pacifico", cursive;
+}
+
+/* *Colors */
+.color {
+  color: #e74646;
+  color: #fa9884;
+  color: #ffe5ca;
+  color: #fff3e2;
+  color: #454545;
+}
