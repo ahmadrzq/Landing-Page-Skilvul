@@ -118,7 +118,7 @@ main {
 }
 .left > button:hover{
   color: #454545;
-  background:  #fa9884;
+  filter: brightness(0.5);
   transition: all ease-in-out 0.3s;
 }
 .right {
@@ -160,7 +160,7 @@ main {
 }
 .about-img {
   background: #e74646;
-  border-radius: 30px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -245,10 +245,56 @@ p {
   font-family: "DynaPuff", cursive;
 }
 .card-wrapper > button:hover{
-  background:  #fa9884;
+  filter: brightness(0.5);
   transition: all ease-in-out 0.3s;
 }
-/* *Form */
+/* *Contact */
+#contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+}
+.contact-wrapper {
+  background: #fa9884;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  border-radius: 10px;
+}
+.contact-text > h1 {
+  font-family: "DynaPuff", cursive;
+  font-size: 2rem;
+}
+.contact-form{
+  font-family: "DynaPuff", cursive;
+}
+.contact-form input{
+  padding: 1em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  font-family: "DynaPuff", cursive;
+}
+.contact-form input:focus{
+  outline: none;
+}
+#submit-form {
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  background: #454545;
+  color: #fff3e2;
+  cursor: pointer;
+  font-family: "DynaPuff", cursive;
+}
+#submit-form:hover{
+  filter: brightness(0.5);
+  transition: all ease-in-out 0.3s;
+}
+
 /* *Footer */
 /* ! Custom */
 .w-max {
