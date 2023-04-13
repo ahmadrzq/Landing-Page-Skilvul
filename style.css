@@ -90,9 +90,8 @@ main {
 }
 .left,
 .right {
-  width: 100%;
   flex-grow: 1;
-  flex-basis: 500px;
+  flex-basis: 400px;
 }
 .left > img {
   width: 100%;
@@ -116,6 +115,11 @@ main {
   color: #fff3e2;
   cursor: pointer;
   font-family: "DynaPuff", cursive;
+}
+.left > button:hover{
+  color: #454545;
+  background:  #fa9884;
+  transition: all ease-in-out 0.3s;
 }
 .right {
   width: 100%;
@@ -152,7 +156,7 @@ main {
 .about-img {
   margin: 1em;
   flex-grow: 1;
-  flex-basis: 400px;
+  flex-basis: 300px;
 }
 .about-img {
   background: #e74646;
@@ -227,6 +231,22 @@ main {
 .card-wrapper h2,
 p {
   font-family: "DynaPuff", cursive;
+}
+.card-wrapper-text{
+    padding: 1em;
+}
+.card-wrapper > button {
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  background: #454545;
+  color: #fff3e2;
+  cursor: pointer;
+  font-family: "DynaPuff", cursive;
+}
+.card-wrapper > button:hover{
+  background:  #fa9884;
+  transition: all ease-in-out 0.3s;
 }
 /* *Form */
 /* *Footer */
