@@ -117,7 +117,57 @@ main {
   object-fit: cover;
 }
 /* *About */
-
+#about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+}
+.about-wrapper {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-text > h1{
+    font-family: "DynaPuff", cursive;
+    font-size: 2rem;
+}
+.about-text > p{
+  font-family: "DynaPuff", cursive;
+  line-height: 1.8rem;
+}
+.about-text,
+.about-img {
+  width: 50%;
+  margin: 1em;
+}
+.about-img {
+  background: #e74646;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-img > img {
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.about-img > img:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.3s;
+}
+.about-img > h1 {
+  position: absolute;
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  color: #fff3e2;
+}
 /* *Form */
 /* *Footer */
 /* ! Custom */
