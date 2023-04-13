@@ -21,6 +21,7 @@ header {
   padding: 1em;
   /* margin: 0 auto; */
   position: fixed;
+  z-index: 999999;
 }
 
 .logo > h1 {
@@ -81,10 +82,17 @@ main {
   background-size: cover;
   height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0 10em;
+  padding: 0 10vw;
   font-family: "DynaPuff", cursive;
+}
+.left,
+.right {
+  width: 100%;
+  flex-grow: 1;
+  flex-basis: 500px;
 }
 .left > img {
   width: 100%;
@@ -128,21 +136,23 @@ main {
   width: 100%;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.about-text > h1{
-    font-family: "DynaPuff", cursive;
-    font-size: 2rem;
+.about-text > h1 {
+  font-family: "DynaPuff", cursive;
+  font-size: 2rem;
 }
-.about-text > p{
+.about-text > p {
   font-family: "DynaPuff", cursive;
   line-height: 1.8rem;
 }
 .about-text,
 .about-img {
-  width: 50%;
   margin: 1em;
+  flex-grow: 1;
+  flex-basis: 400px;
 }
 .about-img {
   background: #e74646;
@@ -167,6 +177,56 @@ main {
   font-family: "Pacifico", cursive;
   font-size: 3rem;
   color: #fff3e2;
+}
+/* *Product */
+#product {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2em 1em;
+}
+.product-wrapper {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product-text > h1 {
+  font-family: "DynaPuff", cursive;
+  font-size: 2rem;
+}
+.product-img {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  flex-grow: 1;
+  flex-basis: 300px;
+}
+.card-wrapper {
+  border-radius: 10px;
+  background: #ffe5ca;
+  margin: 1em;
+  padding: 0.5em;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.card-wrapper > img {
+  border-radius: 10px;
+  width: 100%;
+  max-height: 250px;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.card-wrapper h2,
+p {
+  font-family: "DynaPuff", cursive;
 }
 /* *Form */
 /* *Footer */
