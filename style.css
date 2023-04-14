@@ -12,7 +12,7 @@
 header {
   display: flex;
   justify-content: center;
-  position: relative;
+  width: 100%;
 }
 .header-wrapper {
   z-index: 99;
@@ -20,9 +20,9 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1em;
   position: fixed;
+  top: 0;
 }
 .scroll {
   background: #e74646 !important;
@@ -463,11 +463,6 @@ footer {
   .card-wrapper > button {
     font-size: 1rem ;
     padding: 0.5em ;
-  }
-  .footer-text,
-  .footer-link,
-  .footer-contact {
-    margin: 0.5em ;
   }
   .footer-text p,
   .footer-link li,

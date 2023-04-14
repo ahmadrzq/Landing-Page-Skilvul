@@ -17,7 +17,6 @@ const navbarMin = document.querySelector(".navbar-min");
 const closeBtn = document.querySelector(".close-btn");
 const navLink = document.querySelectorAll(".navbar-min ul li a");
 const body = document.querySelector("body");
-console.log(navLink);
 
 menuBtn.addEventListener("click", function () {
   navbarMin.classList.add("active-header");
@@ -27,9 +26,22 @@ closeBtn.addEventListener("click", function () {
   navbarMin.classList.remove("active-header");
   body.classList.remove("no-scroll");
 });
-navLink.forEach(element => {
+navLink.forEach((element) => {
   element.addEventListener("click", function () {
     navbarMin.classList.remove("active-header");
     body.classList.remove("no-scroll");
   });
 });
+
+// Check input type number
+function isNumber() {
+  const inputNumber = document.querySelector("#zip-code").value;
+  if (isNaN(inputNumber)){
+    return false;
+  } else{
+    return true;
+  }
+}
+
+
+
