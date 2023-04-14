@@ -24,12 +24,9 @@
     <header>
       <div class="header-wrapper w-max">
         <div class="logo">
-          <h1>Ice Cream Oasis</h1>
+          <h1><a href="#">Ice Cream Oasis</a></h1>
         </div>
         <nav class="navbar">
-          <div class="close-btn">
-            <button>X</button>
-          </div>
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -41,11 +38,26 @@
             </li>
           </ul>
         </nav>
-        <div class="bar menu-btn">
+        <div id="menu-btn" class="bar">
           <i class="bx bx-menu"></i>
         </div>
       </div>
     </header>
+    <section class="navbar-min">
+      <div class="close-btn">
+        <button>X</button>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="search">
+          <input type="text" placeholder="Search" />
+          <i class="bx bx-search"></i>
+        </li>
+      </ul>
+    </section>
     <main>
       <section id="hero">
         <div class="left">
@@ -168,7 +180,7 @@
       </section>
       <section id="contact">
         <div class="contact-wrapper w-max">
-          <div class="contact-text mb-1">
+          <div class="contact-text">
             <h1 class="mb-1">Contact Us</h1>
             <p>
               Order your favorite ice cream online and enjoy it from the comfort
