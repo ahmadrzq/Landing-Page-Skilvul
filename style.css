@@ -214,7 +214,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6em 1em;
+  padding: 6em 1em 0;
 }
 .about-wrapper {
   width: 100%;
@@ -267,7 +267,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 6em 1em;
+  padding: 6em 1em 0;
 }
 .product-wrapper {
   width: 100%;
@@ -336,7 +336,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6em 2em;
+  padding: 6em 2em 4em;
 }
 .contact-wrapper {
   background: #fa9884;
