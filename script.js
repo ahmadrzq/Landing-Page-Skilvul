@@ -36,12 +36,70 @@ navLink.forEach((element) => {
 // Check input type number
 function isNumber() {
   const inputNumber = document.querySelector("#zip-code").value;
-  if (isNaN(inputNumber)){
+  if (isNaN(inputNumber)) {
     return false;
-  } else{
+  } else {
     return true;
   }
 }
 
+// Check inbox is checked or not
+function checkboxIsChecked() {
+  if (checkbox && checkbox.checked) {
+    console.log("checked");
+    return true;
+  } else {
+    console.log("Not checked");
+    return false;
+  }
+}
+const checkbox = document.getElementById("status");
+console.log(checkbox);
+checkbox.addEventListener("click", function () {
+  checkboxIsChecked();
+});
 
+// Check input is empty or not
+function validateFormData() {
+  const inputs = document.querySelectorAll(
+    "#name, #city, #email, #zip-code, #status"
+  );
+  for (let input of inputs) {
+    if (
+      input.value !== null &&
+      isNumber() === true &&
+      checkboxIsChecked() === true
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
 
+// Event when click submit button
+const form = document.querySelector(".contact-form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (validateFormData() === true) {
+    alert("Thank you for your submission");
+    clearInput();
+  } else {
+    alert("Please fill out the form correctly");
+  }
+});
+
+// Clear input when submit success
+function clearInput() {
+  const inputs = document.querySelectorAll(
+    "#name, #city, #email, #zip-code, #status"
+  );
+  for (let input of inputs) {
+    if (input.type === "checkbox") {
+      input.checked = false;
+    } else if (input.type === "number") {
+      input.value = "";
+    } else {
+      input.value = "";
+    }
+  }
+}
