@@ -7,7 +7,9 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
-
+main{
+  overflow-x: hidden;
+}
 /* *Header */
 header {
   display: flex;
