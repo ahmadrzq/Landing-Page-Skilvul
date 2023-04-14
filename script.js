@@ -1,3 +1,4 @@
+// Tambahkan kode JavaScript kalian di file ini
 // Sticky Header
 const header = document.querySelector(".header-wrapper");
 
@@ -34,9 +35,9 @@ navLink.forEach((element) => {
 });
 
 // Check input type number
-function isNumber() {
-  const inputNumber = document.querySelector("#zip-code").value;
-  if (isNaN(inputNumber)) {
+function isNumber(number) {
+  // const inputNumber = document.querySelector("#zip-code").value;
+  if (isNaN(number)) {
     return false;
   } else {
     return true;
@@ -46,47 +47,42 @@ function isNumber() {
 // Check inbox is checked or not
 function checkboxIsChecked() {
   if (checkbox && checkbox.checked) {
-    console.log("checked");
     return true;
   } else {
-    console.log("Not checked");
     return false;
   }
 }
 const checkbox = document.getElementById("status");
-console.log(checkbox);
 checkbox.addEventListener("click", function () {
   checkboxIsChecked();
 });
 
 // Check input is empty or not
-function validateFormData() {
-  const inputs = document.querySelectorAll(
-    "#name, #city, #email, #zip-code, #status"
-  );
-  for (let input of inputs) {
-    if (
-      input.value !== null &&
-      isNumber() === true &&
-      checkboxIsChecked() === true
-    ) {
-      return true;
+function validateFormData(obj) {
+    if (obj != null && isNumber(obj.zipCode) && checkboxIsChecked()) {
+        return true
     }
-  }
-  return false;
+    return false
 }
 
+
 // Event when click submit button
-const form = document.querySelector(".contact-form");
-form.addEventListener("submit", function (event) {
+const form = document.querySelector("form");
+const warning = document.querySelector("#warning");
+
+function submit(event){
   event.preventDefault();
-  if (validateFormData() === true) {
-    alert("Thank you for your submission");
-    clearInput();
+  const input = validateFormData(handleGetFormData());
+  if (input == false) {
+    warning.innerHTML = "<p>Periksa form anda sekali lagi</p>";
   } else {
-    alert("Please fill out the form correctly");
+    warning.innerHTML = "";
+    clearInput();
   }
-});
+}
+
+form.addEventListener("submit", submit);
+
 
 // Clear input when submit success
 function clearInput() {
@@ -103,3 +99,12 @@ function clearInput() {
     }
   }
 }
+
+// Function to read the input form data
+const handleGetFormData = () => ({
+  name: document.getElementById("name").value,
+  email: document.getElementById("email").value,
+  city: document.getElementById("city").value,
+  zipCode: document.getElementById("zip-code").value,
+  status: document.getElementById("status").checked,
+});
