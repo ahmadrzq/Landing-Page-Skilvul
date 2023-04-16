@@ -149,7 +149,7 @@ main {
 #hero {
   background: url(assets/images/blob-scene-haikei.svg);
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
